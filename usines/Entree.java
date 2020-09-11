@@ -1,16 +1,16 @@
 package usines;
 
 public class Entree {
-    private String nom;
+    private String type;
     private int quantite;
 
-    Entree(String nom, int quantite) {
-        this.nom = nom;
+    Entree(String type, int quantite) {
+        this.type = type;
         this.quantite = quantite;
     }
 
-    public String getNom() {
-        return nom;
+    public String getType() {
+        return type;
     }
 
     public int getQuantite() {
