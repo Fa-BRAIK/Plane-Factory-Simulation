@@ -1,13 +1,11 @@
 package usines;
 
-import javafx.scene.image.Image;
-
 import java.util.ArrayList;
 
 public class Usine {
     public static final int nombreEtat = 4;
 
-    protected IconeUsine[] icones = new IconeUsine[4];
+    protected IconeUsine[] icones;
     protected ArrayList<Entree> entrees;
     protected Sortie sortie;
     protected EtatUsine etat= EtatUsine.VIDE;
