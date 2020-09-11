@@ -5,7 +5,9 @@ import javafx.scene.image.Image;
 import java.util.ArrayList;
 
 public class Usine {
-    protected Image icones;
+    public static final int nombreEtat = 4;
+
+    protected IconeUsine[] icones = new IconeUsine[4];
     protected ArrayList<Entree> entrees;
     protected Sortie sortie;
     protected EtatUsine etat= EtatUsine.VIDE;
@@ -15,8 +17,8 @@ public class Usine {
         this.sortie = sortie;
     }
 
-    public Image getIcones() {
-        return icones;
+    public IconeUsine getIcone(int index) {
+        return icones[index % nombreEtat];
     }
 
     public ArrayList<Entree> getEntrees() {

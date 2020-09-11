@@ -15,16 +15,16 @@ public class Composant {
     Composant(String type) {
         if (type.equals("metal")) {
             this.type = ComposantType.METAL;
-            this.icon = new Image("/src/ressources/metal.png");
+            this.icon = new Image("src/ressources/metal.png");
         } else if (type.equals("aile")) {
             this.type = ComposantType.AILE;
-            this.icon = new Image("/src/ressources/aile.png");
+            this.icon = new Image("src/ressources/aile.png");
         } else if (type.equals("moteur")) {
             this.type = ComposantType.MOTEUR;
-            this.icon = new Image("/src/ressources/moteur.png");
+            this.icon = new Image("src/ressources/moteur.png");
         } else {
             this.type = ComposantType.AVION;
-            this.icon = new Image("/src/ressources/avion.png");
+            this.icon = new Image("src/ressources/avion.png");
         }
     }
 
