@@ -1,13 +1,13 @@
 package usines;
 
 public class Sortie {
-    private String type;
+    private Composant composant;
 
     Sortie(String type) {
-        this.type = type;
+        this.composant = new Composant(type);
     }
 
-    public String getType() {
-        return type;
+    public String getTypeComposant() {
+        return composant.getType().name();
     }
 }
