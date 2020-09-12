@@ -2,11 +2,13 @@ package usines;
 
 import javafx.scene.image.Image;
 
+import java.awt.image.BufferedImage;
+
 public class Entree {
     private Composant composant;
     private int quantite;
 
-    Entree(String type, int quantite) {
+    public Entree(String type, int quantite) {
         this.composant = new Composant(type);
         this.quantite = quantite;
     }
@@ -15,7 +17,7 @@ public class Entree {
         return composant.getType().name();
     }
 
-    public Image getImageComposant() { return composant.getIcon(); }
+    public BufferedImage getImageComposant() { return composant.getIcon(); }
 
     public int getQuantite() {
         return quantite;

@@ -1,14 +1,21 @@
 /**
  * This class is to test the usines package classes
  */
+import javax.imageio.ImageIO;
 import javax.swing.plaf.synth.SynthOptionPaneUI;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
+import usines.Entree;
+
+import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.ArrayList;
 
 public class Test {
     /**
@@ -17,6 +24,8 @@ public class Test {
      */
     public static void main(String[] args) {
         try {
+            //BufferedImage image = ImageIO.read(new File("src/ressources/aile.png"));
+
             File file = new File("src/ressources/configuration.xml");
 
             //an instance of factory that gives a document builder
@@ -31,6 +40,8 @@ public class Test {
                 if (nodeList.item(i).getNodeType() == Node.ELEMENT_NODE) {
                     System.out.println("Node Item");
 
+                    System.out.println(nodeList.item(i).getAttributes().getNamedItem("type"));
+
                     Element eElement = (Element) nodeList.item(i);
 
                     Element elIcones = (Element) eElement.getElementsByTagName("icones")
@@ -42,10 +53,35 @@ public class Test {
                     Node sortie = eElement.getElementsByTagName("sortie").item(0),
                          intervalProd = eElement.getElementsByTagName("interval-production").item(0);
 
-                    System.out.println("Icones : " + icones.getLength());
+                    /*System.out.println("Icones : " + icones.getLength());
                     System.out.println("Entrees : " + entrees.getLength());
                     System.out.println("Sortie : " + sortie);
-                    System.out.println("interval :" + intervalProd);
+                    System.out.println("interval :" + intervalProd);*/
+
+                    // how to read attributes
+                    /*for (int j = 0; j < icones.getLength(); j++) {
+                        //System.out.println(icones.item(j).getAttributes().getNamedItem("type"));
+                        //System.out.println(icones.item(j).getAttributes().getNamedItem("path"));
+                    }*/
+
+                    // Entrées de l'usine
+                    ArrayList<Entree> entrees1 = new ArrayList<Entree>();
+                    for (int j = 0; j < entrees.getLength(); j++) {
+                        String type = entrees.item(j).getAttributes().getNamedItem("type").getTextContent();
+                        String quantite;
+
+                        if (entrees.item(j).getAttributes().getNamedItem("quantite") != null) {
+                            quantite = entrees.item(j).getAttributes().getNamedItem("quantite").getTextContent();
+                        } else {
+                            quantite = entrees.item(j).getAttributes().getNamedItem("capacite").getTextContent();
+                        }
+
+                        entrees1.add(new Entree(type, Integer.parseInt(quantite)));
+                    }
+
+                    System.out.println(entrees1.size());
+
+
 
                     System.out.println("----------");
                 }

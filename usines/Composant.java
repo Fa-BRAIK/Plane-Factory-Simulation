@@ -1,9 +1,12 @@
 package usines;
 
-import javafx.scene.image.Image;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class Composant {
-    private Image icon;
+    private BufferedImage icon;
     private ComposantType type;
 
     /**
@@ -13,22 +16,24 @@ public class Composant {
      * @param type
      */
     Composant(String type) {
-        if (type.equals("metal")) {
-            this.type = ComposantType.METAL;
-            this.icon = new Image("src/ressources/metal.png");
-        } else if (type.equals("aile")) {
-            this.type = ComposantType.AILE;
-            this.icon = new Image("src/ressources/aile.png");
-        } else if (type.equals("moteur")) {
-            this.type = ComposantType.MOTEUR;
-            this.icon = new Image("src/ressources/moteur.png");
-        } else {
-            this.type = ComposantType.AVION;
-            this.icon = new Image("src/ressources/avion.png");
-        }
+        try {
+            if (type.equals("metal")) {
+                this.type = ComposantType.METAL;
+                this.icon = ImageIO.read(new File("src/ressources/metal.png"));
+            } else if (type.equals("aile")) {
+                this.type = ComposantType.AILE;
+                this.icon = ImageIO.read(new File("src/ressources/aile.png"));
+            } else if (type.equals("moteur")) {
+                this.type = ComposantType.MOTEUR;
+                this.icon = ImageIO.read(new File("src/ressources/moteur.png"));
+            } else {
+                this.type = ComposantType.AVION;
+                this.icon = ImageIO.read(new File("src/ressources/avion.png"));
+            }
+        } catch(IOException e) { e.printStackTrace(); }
     }
 
-    public Image getIcon() {
+    public BufferedImage getIcon() {
         return icon;
     }
 

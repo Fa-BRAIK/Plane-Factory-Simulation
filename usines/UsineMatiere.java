@@ -1,5 +1,9 @@
 package usines;
 
+
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
 import java.util.ArrayList;
 
 public class UsineMatiere extends UsineProductive {
