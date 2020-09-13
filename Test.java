@@ -79,9 +79,9 @@ public class Test {
                         entrees1.add(new Entree(type, Integer.parseInt(quantite)));
                     }
 
-                    System.out.println(entrees1.size());
-
-
+                    if (sortie != null) {
+                        System.out.println(sortie.getAttributes().getNamedItem("type").getTextContent());
+                    }
 
                     System.out.println("----------");
                 }

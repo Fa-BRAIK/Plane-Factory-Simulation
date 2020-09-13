@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Usine {
     public static final int nombreEtat = 4;
 
+    protected double posX, posY;
     protected IconeUsine[] icones;
     protected ArrayList<Entree> entrees;
     protected Sortie sortie;
