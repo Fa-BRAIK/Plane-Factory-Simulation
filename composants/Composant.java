@@ -17,4 +17,14 @@ public class Composant {
             return ImageIO.read(file);
         } catch(IOException e) {e.printStackTrace(); return null;}
     }
+
+    public static Composant nouvelComposant(Composant composant) {
+        if (composant instanceof Aile)
+            return new Aile(composant.quantite);
+        else if (composant instanceof Avion)
+            return new Avion(composant.quantite);
+        else if (composant instanceof Metal)
+            return new Metal(composant.quantite);
+        else return new Moteur(composant.quantite);
+    }
 }
