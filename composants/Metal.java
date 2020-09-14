@@ -5,4 +5,8 @@ import java.io.File;
 
 public class Metal extends Composant {
     public static BufferedImage icone = Composant.read(new File("src/ressources/metal.png"));
+
+    protected Metal(int quantite) {
+        super(quantite);
+    }
 }

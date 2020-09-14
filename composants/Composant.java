@@ -6,6 +6,11 @@ import java.io.File;
 import java.io.IOException;
 
 public class Composant {
+    protected int quantite;
+
+    protected Composant(int quantite) {
+        this.quantite = quantite;
+    }
 
     protected static BufferedImage read(File file) {
         try {

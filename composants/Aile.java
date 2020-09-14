@@ -5,4 +5,8 @@ import java.io.File;
 
 public class Aile extends Composant {
     public static BufferedImage icone = Composant.read(new File("src/ressources/aile.png"));
+
+    protected Aile(int quantite) {
+        super(quantite);
+    }
 }
