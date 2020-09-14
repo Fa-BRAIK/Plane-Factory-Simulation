@@ -9,9 +9,6 @@ public class UsineAile extends UsineProductive {
     private static ArrayList<Composant> entreesUsine = new ArrayList<>();
     private static Composant sortieUsine = null;
 
-    private ArrayList<Composant> entrees = new ArrayList<>();
-    private Composant sortie;
-
     public static void init(ArrayList<Composant> entrees, Composant sortie) {
         UsineAile.entreesUsine = entrees;
         UsineAile.sortieUsine = sortie;
@@ -25,13 +22,5 @@ public class UsineAile extends UsineProductive {
         }
 
         sortie = Composant.nouvelComposant(UsineAile.sortieUsine);
-    }
-
-    public ArrayList<Composant> getEntrees() {
-        return entrees;
-    }
-
-    public Composant getSortie() {
-        return sortie;
     }
 }
