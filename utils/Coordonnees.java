@@ -3,7 +3,7 @@ package utils;
 public class Coordonnees {
     protected double positionX, positionY;
 
-    Coordonnees(double positionX, double positionY) {
+    public Coordonnees(double positionX, double positionY) {
         this.positionX = positionX;
         this.positionY = positionY;
     }
