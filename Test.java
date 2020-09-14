@@ -1,8 +1,3 @@
-/**
- * This class is to test the usines package classes
- */
-import javax.imageio.ImageIO;
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 
@@ -12,8 +7,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import usines.Entree;
 
-import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
 
