@@ -5,7 +5,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
-import usines.Entree;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -31,7 +30,7 @@ public class Test {
 
             for (int i = 0; i < nodeList.getLength(); i++) {
                 if (nodeList.item(i).getNodeType() == Node.ELEMENT_NODE) {
-                    System.out.println("Node Item");
+                    /*System.out.println("Node Item");
 
                     System.out.println(nodeList.item(i).getAttributes().getNamedItem("type"));
 
@@ -44,7 +43,7 @@ public class Test {
                             icones = elIcones.getElementsByTagName("icone");
 
                     Node sortie = eElement.getElementsByTagName("sortie").item(0),
-                         intervalProd = eElement.getElementsByTagName("interval-production").item(0);
+                         intervalProd = eElement.getElementsByTagName("interval-production").item(0);*/
 
                     /*System.out.println("Icones : " + icones.getLength());
                     System.out.println("Entrees : " + entrees.getLength());
@@ -58,7 +57,7 @@ public class Test {
                     }*/
 
                     // Entrées de l'usine
-                    ArrayList<Entree> entrees1 = new ArrayList<Entree>();
+                    /*ArrayList<Entree> entrees1 = new ArrayList<Entree>();
                     for (int j = 0; j < entrees.getLength(); j++) {
                         String type = entrees.item(j).getAttributes().getNamedItem("type").getTextContent();
                         String quantite;
@@ -76,7 +75,7 @@ public class Test {
                         System.out.println(sortie.getAttributes().getNamedItem("type").getTextContent());
                     }
 
-                    System.out.println("----------");
+                    System.out.println("----------");*/
                 }
             }
         } catch(Exception e) { e.printStackTrace(); }
