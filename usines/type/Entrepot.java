@@ -3,8 +3,6 @@ package usines.type;
 import composants.Composant;
 import usines.Usine;
 
-import java.util.ArrayList;
-
 public class Entrepot extends Usine {
     private static Composant entreeEntrepot;
 
@@ -17,5 +15,9 @@ public class Entrepot extends Usine {
     public Entrepot(int id, double positionX, double positionY) {
         super(id, positionX, positionY);
         entree = Composant.nouvelComposant(entreeEntrepot);
+    }
+
+    public Composant getEntree() {
+        return entree;
     }
 }
