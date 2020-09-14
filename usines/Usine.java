@@ -14,4 +14,20 @@ public class Usine extends Coordonnees {
         super(positionX, positionY);
         this.id = id;
     }
+
+    public static BufferedImage[] getIcones() {
+        return icones;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public EtatUsine getEtat() {
+        return etat;
+    }
+
+    public void setEtat(EtatUsine etat) {
+        this.etat = etat;
+    }
 }
