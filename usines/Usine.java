@@ -4,7 +4,7 @@ import utils.Coordonnees;
 
 import java.awt.image.BufferedImage;
 
-public class Usine extends Coordonnees {
+public abstract class Usine extends Coordonnees {
     public static BufferedImage[] icones;
 
     protected int id;
@@ -14,6 +14,8 @@ public class Usine extends Coordonnees {
         super(positionX, positionY);
         this.id = id;
     }
+
+    public abstract void dessiner();
 
     public static BufferedImage[] getIcones() {
         return icones;

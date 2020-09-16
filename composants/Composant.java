@@ -1,15 +1,20 @@
 package composants;
 
+import utils.Coordonnees;
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class Composant {
+public class Composant extends Coordonnees {
     protected int quantite;
+    protected int courant;
 
     protected Composant(int quantite) {
+        super(-50, -50);
         this.quantite = quantite;
+        this.courant = 1;
     }
 
     protected static BufferedImage read(File file) {

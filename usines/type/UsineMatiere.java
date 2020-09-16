@@ -23,4 +23,9 @@ public class UsineMatiere extends UsineProductive {
 
         sortie = Composant.nouvelComposant(UsineMatiere.sortieUsine);
     }
+
+    @Override
+    public Composant produireComposant() {
+        return null;
+    }
 }

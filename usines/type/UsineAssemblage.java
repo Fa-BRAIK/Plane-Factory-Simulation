@@ -23,4 +23,9 @@ public class UsineAssemblage extends UsineProductive {
 
         sortie = Composant.nouvelComposant(UsineAssemblage.sortieUsine);
     }
+
+    @Override
+    public Composant produireComposant() {
+        return null;
+    }
 }

@@ -17,6 +17,11 @@ public class Entrepot extends Usine {
         entree = Composant.nouvelComposant(entreeEntrepot);
     }
 
+    @Override
+    public void dessiner() {
+        //
+    }
+
     public Composant getEntree() {
         return entree;
     }
